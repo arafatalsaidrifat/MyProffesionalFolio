@@ -25,6 +25,7 @@ nav {
   align-items: center;
   padding: 1rem 2rem;
   z-index: 1000;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
