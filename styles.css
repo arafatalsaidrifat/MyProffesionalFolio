@@ -119,14 +119,14 @@ nav ul li a:hover {
 @media (max-width: 768px) {
   nav ul {
     position: absolute;
-    top: 100%;
-    right: 0;
+    top: 60px; /* Below navbar */
+    right: 20px;
     background: rgba(0,0,0,0.95);
     flex-direction: column;
     width: 220px;
     display: none;
     padding: 1rem;
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px;
   }
 
   nav ul.active {
@@ -137,7 +137,6 @@ nav ul li a:hover {
     display: flex;
   }
 }
-
 
 /* Hero Section */
 #hero {
@@ -339,27 +338,8 @@ footer svg {
   100% { box-shadow: 0 0 15px #00f6ff88; }
 }
 
-/* Responsive Styles */
+/* Additional Responsive Styles */
 @media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: rgba(0,0,0,0.9);
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 1rem;
-    border-radius: 10px;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
   .image-box {
     width: 150px;
     height: 150px;
