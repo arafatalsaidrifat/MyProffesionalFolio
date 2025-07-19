@@ -46,3 +46,20 @@ const navLinks = document.querySelector("nav ul");
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("success") === "true") {
+    const msg = document.getElementById("success-message");
+    if (msg) {
+      msg.style.display = "block";
+
+      // Remove query string from URL without reloading
+      window.history.replaceState({}, document.title, window.location.pathname + "#contact");
+
+      // Hide message after 5 seconds (optional)
+      setTimeout(() => { msg.style.display = "none"; }, 5000);
+    }
+  }
+});
