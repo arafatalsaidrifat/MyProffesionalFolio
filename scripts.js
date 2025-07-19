@@ -39,6 +39,13 @@ particlesJS("particles-js", {
   }
 });
 
+
+
+function toggleMenu() {
+  document.querySelector('nav ul').classList.toggle('active');
+}
+
+
 /* Navbar Toggle */
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector("nav ul");
