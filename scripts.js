@@ -1,14 +1,16 @@
 /* Typing Effect */
 const typedText = document.querySelector(".typing");
 const textArray = ["Web Developer", "Full Stack Engineer", "Competitive Programmer", "Tech Enthusiast"];
-let arrayIndex = 0; let charIndex = 0;
+let arrayIndex = 0, charIndex = 0;
 
 function type() {
   if (charIndex < textArray[arrayIndex].length) {
     typedText.textContent += textArray[arrayIndex].charAt(charIndex);
     charIndex++;
     setTimeout(type, 100);
-  } else { setTimeout(erase, 2000); }
+  } else {
+    setTimeout(erase, 2000);
+  }
 }
 function erase() {
   if (charIndex > 0) {
@@ -16,12 +18,13 @@ function erase() {
     charIndex--;
     setTimeout(erase, 50);
   } else {
-    arrayIndex++;
-    if (arrayIndex >= textArray.length) arrayIndex = 0;
+    arrayIndex = (arrayIndex + 1) % textArray.length;
     setTimeout(type, 500);
   }
 }
-document.addEventListener("DOMContentLoaded", function () { if (textArray.length) setTimeout(type, 500); });
+document.addEventListener("DOMContentLoaded", () => {
+  if (textArray.length) setTimeout(type, 500);
+});
 
 /* Particles.js */
 particlesJS("particles-js", {
@@ -35,7 +38,8 @@ particlesJS("particles-js", {
     "move": { "enable": true, "speed": 3 }
   }
 });
-/* Navigation Menu */
+
+/* Navbar Toggle */
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector("nav ul");
 
