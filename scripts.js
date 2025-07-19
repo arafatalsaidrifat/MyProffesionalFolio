@@ -47,7 +47,7 @@ menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-
+/* Contact Form Success Message */
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   if (params.get("success") === "true") {
