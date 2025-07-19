@@ -37,8 +37,8 @@ particlesJS("particles-js", {
 });
 /* Navigation Menu */
 const menuToggle = document.querySelector(".menu-toggle");
-const sideMenu = document.getElementById("sideMenu");
+const navLinks = document.querySelector("nav ul");
 
 menuToggle.addEventListener("click", function () {
-  sideMenu.classList.toggle("active");
+  navLinks.classList.toggle("active");
 });
