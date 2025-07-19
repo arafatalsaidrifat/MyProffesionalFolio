@@ -77,14 +77,21 @@
 
   <!-- Contact -->
   <section id="contact">
-    <h2>Contact Me</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+  <h2>Contact Me</h2>
+  <form class="contact-form" action="https://formsubmit.co/rifathxoyo@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+    <input type="hidden" name="_subject" value="New message from Portfolio!">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_autoresponse" value="Thank you for contacting me. I will reply soon.">
+    <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
 
   <!-- Footer -->
   <footer>
